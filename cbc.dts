@@ -72,7 +72,7 @@
 
     sw1_encoder: encoder_sw1 {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <18>;
         status = "enabled";
@@ -80,7 +80,7 @@
 
     sw2_encoder: encoder_sw2 {
         compatible = "alps,ec11";
-        a-gpios = <&gpio1 09 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&gpio1 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <18>;
         status = "enabled";
@@ -97,14 +97,14 @@
     sw4_encoder: encoder_sw4 {
         compatible = "alps,ec11";
         a-gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <18>;
         status = "enabled";
     };
 
     sw5_encoder: encoder_sw5 {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 08 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <18>;
         status = "enabled";
