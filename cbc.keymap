@@ -246,13 +246,7 @@
             timeout-ms = <80>;
             key-positions = <50 29>;
             bindings = <&kp KC_R>;            
-        };
-
-        l{
-            timeout-ms = <80>;
-            key-positions = <50 35>;
-            bindings = <&kp KC_L>;            
-        };        
+        };       
 
         h{
             timeout-ms = <80>;
