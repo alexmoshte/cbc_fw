@@ -19,7 +19,7 @@
             &none   &none             &kp PLUS                        &kp MINUS
                     &none
             >;
-            sensor-bindings = <&inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O)>;
+            sensor-bindings = <&inc_dec_kp LS(C) LS(O) &inc_dec_kp LS(C) LS(O) &inc_dec_kp LS(C) LS(O) &inc_dec_kp LS(C) LS(O) &inc_dec_kp LS(C) LS(O)>;
         };
     };
 
