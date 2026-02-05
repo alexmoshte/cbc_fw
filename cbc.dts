@@ -1,7 +1,7 @@
 /dts-v1/;
 #include <nordic/nrf52840_qfaa.dtsi>
 #include <nordic/nrf52840.dtsi>
-#include "cbc-pinctrl.dtsi"
+// #include "cbc-pinctrl.dtsi"
 
 #include <dt-bindings/zmk/matrix_transform.h>
 
