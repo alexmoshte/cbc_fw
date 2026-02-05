@@ -125,6 +125,14 @@
     status = "okay";
 };
 
+&gpiote {
+    status = "okay";
+};
+
+&usbd {
+    status = "okay";
+};
+
 &sw1_encoder {
     status = "okay";
 };
@@ -149,9 +157,6 @@
     transform = <&layout_grid_transform>;
 };
 
-&usbd {
-    status = "okay";
-};
 
 &flash0 {
 	partitions {
