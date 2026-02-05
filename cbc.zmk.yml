@@ -1,0 +1,18 @@
+file_format: "1"
+id: cbcv1
+name: CBC
+type: board
+arch: arm
+features:
+  - keys
+  - encoder
+  - underglow
+outputs:
+  - usb
+  - bluetooth
+manufacturer: chordboardmusic
+maintainer: lab fermion
+url: https://chordboardmusic.com/
+revisions:
+  - "3.0.0"
+default_revision: "3.0.0"

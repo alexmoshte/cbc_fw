@@ -1,0 +1,19 @@
+
+identifier: cbcv1
+name: CBC
+type: keyboard
+arch: arm
+toolchain:
+  - zephyr
+ram: 256
+supported:
+  - gpio
+  - i2c
+  - spi
+  - counter
+  - pwm
+  - usb_device
+  - ble
+  - flash
+  - nvs
+  - kscan

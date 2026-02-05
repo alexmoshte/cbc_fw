@@ -1,0 +1,10 @@
+board:
+  name: cbc
+  vendor: chordboard
+  socs:
+    - name: nrf52840
+  revision:
+    format: major.minor.patch
+    default: 3.0.0
+    revisions:
+      - name: 3.0.0

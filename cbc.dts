@@ -1,0 +1,196 @@
+/dts-v1/;
+#include <nordic/nrf52840_qfaa.dtsi>
+#include <nordic/nrf52840.dtsi>
+#include "cbc-pinctrl.dtsi"
+
+#include <dt-bindings/zmk/matrix_transform.h>
+
+#include <layouts/common/ortho_4x12/1x2u.dtsi>
+#include <layouts/common/ortho_4x12/2x2u.dtsi>
+#include <layouts/common/ortho_4x12/all1u.dtsi>
+
+/ {
+
+    model = "A HID device for interracting with the Chord Board application via BLE";
+    compatible = "chordboard,cbc", "nordic,nrf52840";
+
+    chosen {
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
+        zephyr,code-partition = &slot0_partition;
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = &layout_ortho_4x12_all1u;
+    };
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
+        diode-direction = "col2row";
+        row-gpios
+            = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 03 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 01 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+        col-gpios
+            = <&gpio1 13 GPIO_ACTIVE_HIGH>
+            , <&gpio0 15 GPIO_ACTIVE_HIGH>
+            , <&gpio1 10 GPIO_ACTIVE_HIGH>
+            , <&gpio0 14 GPIO_ACTIVE_HIGH>
+            , <&gpio1 07 GPIO_ACTIVE_HIGH>
+            , <&gpio0 24 GPIO_ACTIVE_HIGH>
+            , <&gpio1 05 GPIO_ACTIVE_HIGH>
+            , <&gpio0 20 GPIO_ACTIVE_HIGH>
+            , <&gpio0 17 GPIO_ACTIVE_HIGH>
+            , <&gpio0 16 GPIO_ACTIVE_HIGH>
+            , <&gpio0 22 GPIO_ACTIVE_HIGH>
+            ;
+        debounce-period-ms = <7>;
+    };
+
+    layout_grid_transform: keymap_transform_0 {    
+        compatible = "zmk,matrix-transform";
+        columns = <11>;
+        rows = <7>;
+        map = <
+                     RC(0,1)           RC(0,3)  RC(0,4)  RC(0,5)  
+                     RC(1,1)           RC(1,3)  RC(1,4)  RC(1,5) 
+                     RC(2,1)  RC(2,2)  RC(2,3)  RC(2,4)  RC(2,5)  
+                     RC(3,1)  RC(3,2)  RC(3,3)  RC(3,4)  RC(3,5)  
+                     RC(4,1)  RC(4,2)  RC(4,3)  RC(4,4)  RC(4,5)  RC(4,6)
+                     RC(5,1)  RC(5,2)  RC(5,3)  RC(5,4)  RC(5,5)  RC(5,6)
+                     RC(6,1)  RC(6,2)  RC(6,3)  RC(6,4)  RC(6,5)  RC(6,6)
+            RC(7,0)  RC(7,1)  RC(7,2)  RC(7,3)  RC(7,4)  RC(7,5)  RC(7,6)
+                     RC(8,1)  RC(8,2)  RC(8,3)  RC(8,4)  RC(8,5)  RC(8,6)
+            RC(9,0)  RC(9,1)           RC(9,3)                    RC(9,6)
+                     RC(10,1)                                     
+        >;
+    };
+
+    sw1_encoder: encoder_sw1 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 02 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <18>;
+        status = "enabled";
+    };
+
+    sw2_encoder: encoder_sw2 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio1 09 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <18>;
+        status = "enabled";
+    };
+
+    sw3_encoder: encoder_sw3 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 23 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <18>;
+        status = "enabled";
+    };
+
+    sw4_encoder: encoder_sw4 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <18>;
+        status = "enabled";
+    };
+
+    sw5_encoder: encoder_sw5 {
+        compatible = "alps,ec11";
+        a-gpios = <&gpio0 08 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 27 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <18>;
+        status = "enabled";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&sw1_encoder &sw2_encoder &sw3_encoder &sw4_encoder &sw5_encoder>;
+        triggers-per-rotation = <2>;
+    }
+};
+
+&sw1_encoder {
+    status = "okay";
+};
+
+&sw2_encoder {
+    status = "okay";
+};
+
+&sw3_encoder {
+    status = "okay";
+};
+
+&sw4_encoder {
+    status = "okay";
+};
+
+&sw5_encoder {
+    status = "okay";
+};
+
+&layout_ortho_4x12_all1u {
+    transform = <&layout_grid_transform>;
+};
+
+zephyr_udc0: &usb {
+    pinctrl-0 = <&usb_dm_pa11 &usb_dp_pa12>;
+    pinctrl-names = "default";
+    status = "okay";
+};
+
+&clk_hse {
+    status = "okay";
+    clock-frequency = <DT_FREQ_M(8)>;
+};
+
+&pll {
+    prediv = <1>;
+    mul = <9>;
+    clocks = <&clk_hse>;
+    status = "okay";
+};
+
+&rcc {
+    clocks = <&pll>;
+    clock-frequency = <DT_FREQ_M(72)>;
+    ahb-prescaler = <1>;
+    apb1-prescaler = <2>;
+    apb2-prescaler = <1>;
+};
+
+&flash0 {
+	partitions {
+		compatible = "fixed-partitions";
+		#address-cells = <1>;
+		#size-cells = <1>;
+
+		boot_partition: partition@0 {
+			label = "mcuboot";
+			reg = <0x00000000 DT_SIZE_K(48)>;
+		};
+
+		slot0_partition: partition@c000 {
+			label = "image-0";
+			reg = <0x0000c000 DT_SIZE_K(472)>;
+		};
+
+		slot1_partition: partition@82000 {
+			label = "image-1";
+			reg = <0x00082000 DT_SIZE_K(472)>;
+		};
+
+		storage_partition: partition@f8000 {
+			label = "storage";
+			reg = <0x000f8000 DT_SIZE_K(32)>;
+		};
+	};
+};

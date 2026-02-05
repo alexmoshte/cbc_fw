@@ -1,0 +1,9 @@
+if BOARD_CBC
+
+config ZMK_KEYBOARD_NAME
+    default "CBC"
+
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
+
+endif # BOARD_CBC
