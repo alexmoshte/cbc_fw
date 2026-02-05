@@ -68,7 +68,7 @@
             bindings = <&kp LS(KC_4)>;
         };
 
-        shft+5{
+        shft_5{
             timeout-ms = <80>;
             key-positions = <50 28>;
             bindings = <&kp LS(KC_5)>;
