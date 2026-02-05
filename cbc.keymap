@@ -38,7 +38,7 @@
             bindings = <&kp KC_PGUP>;
         };
 
-        shft+pgdn{
+        shft_pgdn{
             timeout-ms = <80>;
             key-positions = <53 49 50 37>;
             bindings = <&kp LS(KC_PGDN)>;
@@ -50,19 +50,19 @@
             bindings = <&kp LS(KC_1)>;
         };
 
-        shft+2{
+        shft_2{
             timeout-ms = <80>;
             key-positions = <50 12>;
             bindings = <&kp LS(KC_2)>;
         };
 
-        shft+3{
+        shft_3{
             timeout-ms = <80>;
             key-positions = <50 17>;
             bindings = <&kp LS(KC_3)>;
         };
 
-        shft+4{
+        shft_4{
             timeout-ms = <80>;
             key-positions = <50 22>;
             bindings = <&kp LS(KC_4)>;
@@ -74,79 +74,79 @@
             bindings = <&kp LS(KC_5)>;
         };
 
-        shft+6{
+        shft_6{
             timeout-ms = <80>;
             key-positions = <50 34>;
             bindings = <&kp LS(KC_6)>;
         };
 
-        shft+7{
+        shft_7{
             timeout-ms = <80>;
             key-positions = <50 41>;
             bindings = <&kp LS(KC_7)>;
         };
 
-        shft+8{
+        shft_8{
             timeout-ms = <80>;
             key-positions = <50 3>;
             bindings = <&kp LS(KC_8)>;
         };
 
-        shft+9{
+        shft_9{
             timeout-ms = <80>;
             key-positions = <50 7>;
             bindings = <&kp LS(KC_9)>;
         };
 
-        shft+ctrl+1{
+        shft_ctrl_1{
             timeout-ms = <80>;
             key-positions = <53 47>;
             bindings = <&kp LS(LC(KC_1))>;
         };
 
-        shft+ctrl+2{
+        shft_ctrl_2{
             timeout-ms = <80>;
             key-positions = <53 12>;
             bindings = <&kp LS(LC(KC_2))>;
         };
 
-        shft+ctrl+3{
+        shft_ctrl_3{
             timeout-ms = <80>;
             key-positions = <53 17>;
             bindings = <&kp LS(LC(KC_3))>;
         };
 
-        shft+ctrl+4{
+        shft_ctrl_4{
             timeout-ms = <80>;
             key-positions = <53 22>;
             bindings = <&kp LS(LC(KC_4))>;
         };
 
-        shft+ctrl+5{
+        shft_ctrl_5{
             timeout-ms = <80>;
             key-positions = <53 28>;
             bindings = <&kp LS(LC(KC_5))>;
         };
 
-        shft+ctrl+6{
+        shft_ctrl_6{
             timeout-ms = <80>;
             key-positions = <53 34>;
             bindings = <&kp LS(LC(KC_6))>;
         };
 
-        shft+ctrl+7{
+        shft_ctrl_7{
             timeout-ms = <80>;
             key-positions = <53 41>;
             bindings = <&kp LS(LC(KC_7))>;
         };
 
-        shft+ctrl+8{
+        shft_ctrl_8{
             timeout-ms = <80>;
             key-positions = <53 3>;
             bindings = <&kp LS(LC(KC_8))>;
         };
 
-        shft+ctrl+9{
+        shft_ctrl_9{
             timeout-ms = <80>;
             key-positions = <53 7>;
             bindings = <&kp LS(LC(KC_9))>;
@@ -158,7 +158,7 @@
             bindings = <&kp KC_S>;   
         };
 
-        alt+s{
+        alt_s{
             timeout-ms = <80>;
             key-positions = <50 53 8>;
             bindings = <&kp LA(KC_S)>;
@@ -170,19 +170,13 @@
             bindings = <&kp KC_M>;
         };
 
-        alt+m{
+        alt_m{
             timeout-ms = <80>;
             key-positions = <50 53 13>;
             bindings = <&kp LA(KC_M)>;
         };
 
-        ctrl+shift+s{
-            timeout-ms = <80>;
-            key-positions = <53 49 4>;
-            bindings = <&kp LC(LS(KC_S))>;
-        };
-
-        ctrl+shift+s{
+        ctrl_shift_s{
             timeout-ms = <80>;
             key-positions = <53 49 4>;
             bindings = <&kp LC(LS(KC_S))>;
@@ -206,7 +200,7 @@
             bindings = <&kp KC_L>; 
         };
 
-        alt+0{
+        alt_0{
             timeout-ms = <80>;
             key-positions = <49 47>;
             bindings = <&kp LA(KC_0)>;    
@@ -218,7 +212,7 @@
             bindings = <&kp KC_P>;  
         };
 
-        shft+l{
+        shft_l{
             timeout-ms = <80>;
             key-positions = <49 24>;
             bindings = <&kp LS(KC_L)>;
