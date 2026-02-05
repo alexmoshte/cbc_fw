@@ -5,7 +5,7 @@
 / {
     keymap{
         compatible = "zmk,keymap";
-        cbc{
+        layer_0{
             bindings = < 
                         &kp KC_SPC               &kp LC(KC_8)     &kp KC_8  &kp LA(KC_8)  
                         &kp HOME                 &kp LC(KC_9)     &kp KC_9  &kp LA(KC_9)  
