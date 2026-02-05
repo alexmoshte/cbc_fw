@@ -44,7 +44,7 @@
             bindings = <&kp LS(KC_PGDN)>;
         };
 
-        shft+1{
+        shft_1{
             timeout-ms = <80>;
             key-positions = <37 47>;
             bindings = <&kp LS(KC_1)>;
