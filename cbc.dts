@@ -20,6 +20,7 @@
         zephyr,code-partition = &slot0_partition;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &layout_ortho_4x12_all1u;
+        // zmk,battery = &vbatt;
     };
 
     kscan0: kscan {
@@ -114,6 +115,14 @@
         sensors = <&sw1_encoder &sw2_encoder &sw3_encoder &sw4_encoder &sw5_encoder>;
         triggers-per-rotation = <2>;
     };
+};
+
+&gpio0 {
+    status = "okay";
+};
+
+&gpio1 {
+    status = "okay";
 };
 
 &sw1_encoder {
