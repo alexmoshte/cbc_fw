@@ -8,7 +8,7 @@
         cbc{
             bindings = < 
                         &kp KC_SPC               &kp LC(KC_8)     &kp KC_8  &kp LA(KC_8)  
-                        &kp KC_HOME              &kp LC(KC_9)     &kp KC_9  &kp LA(KC_9)  
+                        &kp HOME                 &kp LC(KC_9)     &kp KC_9  &kp LA(KC_9)  
                         &kp KC_C      &none      &kp LC(KC_2)     &kp KC_2  &kp LA(KC_2)   
                         &kp KC_D      &none      &kp LC(KC_3)     &kp KC_3  &kp LA(KC_3)   
                         &kp KC_H      &none      &kp LC(KC_4)     &kp KC_4  &kp LA(KC_4)  &kp LC(LA(KC_1)) 
