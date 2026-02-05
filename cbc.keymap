@@ -8,16 +8,16 @@
         cbc{
             bindings = < 
                         &kp KC_SPC               &kp LC(KC_8)     &kp KC_8  &kp LA(KC_8)  
-                        &kp KC_HOME                 &kp LC(KC_9)     &kp KC_9  &kp LA(KC_9)  
-                        &kp KC_C      &kp none   &kp LC(KC_2)     &kp KC_2  &kp LA(KC_2)   
-                        &kp KC_D      &kp none   &kp LC(KC_3)     &kp KC_3  &kp LA(KC_3)   
-                        &kp KC_H      &kp none   &kp LC(KC_4)     &kp KC_4  &kp LA(KC_4)  &kp LC(LA(KC_1)) 
-                        &kp none      &kp KC_O   &kp LC(KC_5)     &kp KC_5  &kp LA(KC_5)  &kp LC(LA(KC_2)) 
-                        &kp KC_LEFT   &kp none   &kp LC(KC_6)     &kp KC_6  &kp LA(KC_6)  &kp LC(LA(KC_3)) 
-            &kp KC_UP   &kp KC_DOWN   &kp none   &kp LC(KC_7)     &kp KC_7  &kp LA(KC_7)  &kp LC(LA(KC_4)) 
-                        &kp KC_RIGHT  &kp none   &kp LC(KC_1)     &kp KC_1  &kp LA(KC_1)  &kp none
-            &kp none    &kp none                 &kp LS(K_EQUAL)                          &kp MINUS
-                        &kp none
+                        &kp KC_HOME              &kp LC(KC_9)     &kp KC_9  &kp LA(KC_9)  
+                        &kp KC_C      &none      &kp LC(KC_2)     &kp KC_2  &kp LA(KC_2)   
+                        &kp KC_D      &none      &kp LC(KC_3)     &kp KC_3  &kp LA(KC_3)   
+                        &kp KC_H      &none      &kp LC(KC_4)     &kp KC_4  &kp LA(KC_4)  &kp LC(LA(KC_1)) 
+                        &none         &kp KC_O   &kp LC(KC_5)     &kp KC_5  &kp LA(KC_5)  &kp LC(LA(KC_2)) 
+                        &kp KC_LEFT   &none      &kp LC(KC_6)     &kp KC_6  &kp LA(KC_6)  &kp LC(LA(KC_3)) 
+            &kp KC_UP   &kp KC_DOWN   &none      &kp LC(KC_7)     &kp KC_7  &kp LA(KC_7)  &kp LC(LA(KC_4)) 
+                        &kp KC_RIGHT  &none      &kp LC(KC_1)     &kp KC_1  &kp LA(KC_1)  &none
+            &none       &none                    &kp LS(K_EQUAL)                          &kp KC_MINUS
+                        &none
             >;
             sensor-bindings = <&inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O)>;
         };
