@@ -7,17 +7,17 @@
         compatible = "zmk,keymap";
         layer_0{
             bindings = < 
-                        &kp KC_SPC               &kp LC(KC_8)     &kp KC_8  &kp LA(KC_8)  
-                        &kp HOME                 &kp LC(KC_9)     &kp KC_9  &kp LA(KC_9)  
-                        &kp KC_C      &none      &kp LC(KC_2)     &kp KC_2  &kp LA(KC_2)   
-                        &kp KC_D      &none      &kp LC(KC_3)     &kp KC_3  &kp LA(KC_3)   
-                        &kp KC_H      &none      &kp LC(KC_4)     &kp KC_4  &kp LA(KC_4)  &kp LC(LA(KC_1)) 
-                        &none         &kp KC_O   &kp LC(KC_5)     &kp KC_5  &kp LA(KC_5)  &kp LC(LA(KC_2)) 
-                        &kp KC_LEFT   &none      &kp LC(KC_6)     &kp KC_6  &kp LA(KC_6)  &kp LC(LA(KC_3)) 
-            &kp KC_UP   &kp KC_DOWN   &none      &kp LC(KC_7)     &kp KC_7  &kp LA(KC_7)  &kp LC(LA(KC_4)) 
-                        &kp KC_RIGHT  &none      &kp LC(KC_1)     &kp KC_1  &kp LA(KC_1)  &none
-            &none       &none                    &kp LS(K_EQUAL)                          &kp KC_MINUS
-                        &none
+                    &kp SPACE         &kp LC(N8)  &kp N8  &kp LA(N8)  
+                    &kp HOME          &kp LC(N9)  &kp N9  &kp LA(N9)  
+                    &kp C      &none  &kp LC(N2)  &kp N2  &kp LA(N2)   
+                    &kp D      &none  &kp LC(N3)  &kp N3  &kp LA(N3)   
+                    &kp H      &none  &kp LC(N4)  &kp N4  &kp LA(N4)  &kp LC(LA(N1)) 
+                    &none      &kp O  &kp LC(N5)  &kp N5  &kp LA(N5)  &kp LC(LA(N2)) 
+                    &kp LEFT   &none  &kp LC(N6)  &kp N6  &kp LA(N6)  &kp LC(LA(N3)) 
+            &kp UP  &kp DOWN   &none  &kp LC(N7)  &kp N7  &kp LA(N7)  &kp LC(LA(N4)) 
+                    &kp RIGHT  &none  &kp LC(N1)  &kp N1  &kp LA(N1)  &none
+            &none   &none             &kp PLUS                        &kp MINUS
+                    &none
             >;
             sensor-bindings = <&inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O) &inc_dec_kp LS(KC_C) LS(KC_O)>;
         };
