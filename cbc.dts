@@ -114,7 +114,7 @@
         compatible = "zmk,keymap-sensors";
         sensors = <&sw1_encoder &sw2_encoder &sw3_encoder &sw4_encoder &sw5_encoder>;
         triggers-per-rotation = <2>;
-    }
+    };
 };
 
 &sw1_encoder {
