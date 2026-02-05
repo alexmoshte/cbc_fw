@@ -48,7 +48,6 @@
             , <&gpio0 16 GPIO_ACTIVE_HIGH>
             , <&gpio0 22 GPIO_ACTIVE_HIGH>
             ;
-        debounce-ms = <7>;
     };
 
     layout_grid_transform: keymap_transform_0 {    

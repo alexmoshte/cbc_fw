@@ -256,6 +256,11 @@
     };
 };
 
+&kscan0 {
+    debounce-press-ms = <7>;
+    debounce-release-ms = <7>;
+};
+
 &sw1_encoder {
     status = "okay";
 };
