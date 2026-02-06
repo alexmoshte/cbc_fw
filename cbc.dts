@@ -1,17 +1,17 @@
 /dts-v1/;
 #include <nordic/nrf52840_qfaa.dtsi>
 #include <nordic/nrf52840.dtsi>
-// #include "cbc-pinctrl.dtsi"
+#include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
+
+#include "../common/ckp-base.dtsi"
+#include "../common/ckp.dtsi"
 
 #include <dt-bindings/zmk/matrix_transform.h>
-
 #include <layouts/common/ortho_4x12/all1u.dtsi>
-// #include <layouts/common/ortho_4x12/1x2u.dtsi>
-// #include <layouts/common/ortho_4x12/2x2u.dtsi>
 
 / {
 
-    model = "A HID device for interracting with the Chord Board application via BLE";
+    model = "A HID device for interracting with the Chord Board application via USB and BLE";
     compatible = "chordboard,cbc", "nordic,nrf52840";
 
     chosen {

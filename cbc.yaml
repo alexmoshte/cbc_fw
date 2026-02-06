@@ -11,9 +11,12 @@ supported:
   - i2c
   - spi
   - counter
+  - adc
   - pwm
   - usb_device
   - ble
   - flash
   - nvs
   - kscan
+  - ieee802154
+  - watchdog

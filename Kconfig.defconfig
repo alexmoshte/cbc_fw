@@ -1,9 +1,23 @@
-if BOARD_CBC
 
 config ZMK_KEYBOARD_NAME
     default "CBC"
-
+    
 config ZMK_KSCAN_MATRIX_POLLING
     default y
+
+if BOARD_CBC
+
+if USB
+
+config USB_NRFX
+    default y
+
+config USB_DEVICE_STACK
+    default y
+
+endif # USB
+
+config BT_CTLR
+    default BT
 
 endif # BOARD_CBC
