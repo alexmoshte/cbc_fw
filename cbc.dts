@@ -3,8 +3,8 @@
 #include <nordic/nrf52840.dtsi>
 #include <common/nordic/nrf52840_uf2_boot_mode.dtsi>
 
-#include "../common/ckp-base.dtsi"
-#include "../common/ckp.dtsi"
+// #include "../common/ckp-base.dtsi"
+// #include "../common/ckp.dtsi"
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/common/ortho_4x12/all1u.dtsi>
