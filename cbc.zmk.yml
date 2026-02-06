@@ -14,5 +14,5 @@ manufacturer: chordboardmusic
 maintainer: lab fermion
 url: https://chordboardmusic.com/
 revisions:
-  - "3.0.0"
-default_revision: "3.0.0"
+  - "1.0.0"
+default_revision: "1.0.0"
