@@ -6,7 +6,7 @@ arch: arm
 features:
   - keys
   - encoder
-  - underglow
+  # - underglow
 outputs:
   - usb
   - bluetooth

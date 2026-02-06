@@ -9,7 +9,6 @@ ram: 256
 supported:
   - gpio
   - i2c
-  - spi
   - counter
   - adc
   - pwm
