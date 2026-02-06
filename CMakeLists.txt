@@ -1,1 +1,1 @@
-# list(APPEND EXTRA_DTC_FLAGS "-qq")
+list(APPEND EXTRA_DTC_FLAGS "-qq")
