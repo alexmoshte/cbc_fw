@@ -17,6 +17,7 @@
     chosen {
         zephyr,sram = &sram0;
         zephyr,flash = &flash0;
+        zephyr,udc = &usbd;
         zephyr,code-partition = &slot0_partition;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &layout_ortho_4x12_all1u;
@@ -130,8 +131,11 @@
 };
 
 &usbd {
+    compatible = "nordic,nrf-usbd";
     status = "okay";
 };
+
+zephyr_udc0: &usbd {};
 
 &sw1_encoder {
     status = "okay";
