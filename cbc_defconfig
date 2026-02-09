@@ -47,6 +47,7 @@ CONFIG_PINCTRL=y
 
 # Clock configuration
 CONFIG_CLOCK_CONTROL=y
+CONFIG_HAS_NRFX=y
 
 # Encoder support
 CONFIG_EC11=y
