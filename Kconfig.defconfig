@@ -7,7 +7,7 @@ config ZMK_KSCAN_MATRIX_POLLING
 
 if BOARD_CBC
 
-if USB
+if USB  
 
 config USB_NRFX
     default y
