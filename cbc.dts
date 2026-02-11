@@ -17,6 +17,7 @@
         zephyr,udc = &usbd;
         zephyr,code-partition = &slot0_partition;
         zmk,kscan = &kscan0;
+        zmk,backlight = &backlight;
         zmk,physical-layout = &layout_ortho_4x12_all1u;
         zmk,battery = &vbatt;
     };
@@ -165,6 +166,134 @@ zephyr_udc0: &usbd {};
     transform = <&layout_grid_transform>;
 };
 
+
+&i2c0 {
+    status = "okay";
+    scl-pin = <&gpio0 5>;
+    sda-pin = <&gpio0 7>;
+
+    is31fl3733_drv1: is31fl3733_drv1@50 {
+        compatible = "issi,is31fl3733";
+        status = "okay";
+        reg = <0x50>;
+        issi,sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
+        issi,shutdown-current = <IS31FL3733_SSD_1UA>;
+        issi,current-limit = <IS31FL3733_CS_10MA>;
+        sync-mode = "slave";
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        blue1@0 {
+            reg = <0>;
+            issi,pwm-register = <0x00>;
+        };
+
+        red1@1 {
+            reg = <1>;
+            issi,pwm-register = <0x01>;
+        };
+
+        green1@2 {
+            reg = <2>;
+            issi,pwm-register = <0x02>;
+        };
+
+        blue2@3 {
+            reg = <3>;
+            issi,pwm-register = <0x03>;
+        };
+
+        green2@4 {
+            reg = <4>;
+            issi,pwm-register = <0x04>;
+        };
+
+        red2@5 {
+            reg = <5>;
+            issi,pwm-register = <0x05>;
+        };
+
+
+        blue3@6 {
+            reg = <6>;
+            issi,pwm-register = <0x06>;
+        };
+
+        green3@7 {
+            reg = <7>;
+            issi,pwm-register = <0x07>;
+        };
+
+        red3@8 {
+            reg = <8>;
+            issi,pwm-register = <0x08>;
+        };
+    };
+};
+
+&i2c1 {
+    status = "okay";
+    scl-pin = <&gpio0 4>;
+    sda-pin = <&gpio0 31>;
+
+    is31fl3733_drv2: is31fl373_drv2@50 {
+        compatible = "issi,is31fl3733";
+        status = "okay";
+        reg = <0x50>;
+        issi,sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
+        issi,shutdown-current = <IS31FL3733_SSD_1UA>;
+        issi,current-limit = <IS31FL3733_CS_10MA>;
+        sync-mode = "slave";
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        blue4@0 {
+            reg = <0>;
+            issi,pwm-register = <0x00>;
+        };
+
+        red4@1 {
+            reg = <1>;
+            issi,pwm-register = <0x01>;
+        };
+
+        green4@2 {
+            reg = <2>;
+            issi,pwm-register = <0x02>;
+        };
+
+        blue5@3 {
+            reg = <3>;
+            issi,pwm-register = <0x03>;
+        };
+
+        green5@4 {
+            reg = <4>;
+            issi,pwm-register = <0x04>;
+        };
+
+        red5@5 {
+            reg = <5>;
+            issi,pwm-register = <0x05>;
+        };
+
+
+        blue6@6 {
+            reg = <6>;
+            issi,pwm-register = <0x06>;
+        };
+
+        green6@7 {
+            reg = <7>;
+            issi,pwm-register = <0x07>;
+        };
+
+        red6@8 {
+            reg = <8>;
+            issi,pwm-register = <0x08>;
+        };
+    };
+};
 
 &flash0 {
 	partitions {
