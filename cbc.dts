@@ -177,8 +177,8 @@ zephyr_udc0: &usbd {};
         status = "okay";
         reg = <0x50>;
         issi,sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
-        issi,shutdown-current = <IS31FL3733_SSD_1UA>;
-        issi,current-limit = <IS31FL3733_CS_10MA>;
+        issi,shutdown-current = <0>;
+        issi,current-limit = <1>;
         sync-mode = "slave";
         #address-cells = <1>;
         #size-cells = <0>;
@@ -236,13 +236,13 @@ zephyr_udc0: &usbd {};
     scl-pin = <&gpio0 4>;
     sda-pin = <&gpio0 31>;
 
-    is31fl3733_2: is31fl373@50 {
+    is31fl3733_2: is31fl3733@50 {
         compatible = "issi,is31fl3733";
         status = "okay";
         reg = <0x50>;
         issi,sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
-        issi,shutdown-current = <IS31FL3733_SSD_1UA>;
-        issi,current-limit = <IS31FL3733_CS_10MA>;
+        issi,shutdown-current = <0>;
+        issi,current-limit = <1>;
         sync-mode = "slave";
         #address-cells = <1>;
         #size-cells = <0>;
