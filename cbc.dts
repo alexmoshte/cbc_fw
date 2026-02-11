@@ -6,6 +6,7 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/common/ortho_4x12/all1u.dtsi>
+#include <dt-bindings/led/is31fl3733.h>
 
 / {
     model = "A HID device for interracting with the chordboard application via USB and BLE";
