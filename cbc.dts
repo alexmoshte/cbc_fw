@@ -183,48 +183,48 @@ zephyr_udc0: &usbd {};
         #address-cells = <1>;
         #size-cells = <0>;
 
-        blue1@0 {
+        blue1: blue1@0 {
             reg = <0>;
             issi,pwm-register = <0x00>;
         };
 
-        red1@1 {
+        red1: red1@1 {
             reg = <1>;
             issi,pwm-register = <0x01>;
         };
 
-        green1@2 {
+        green1: green1@2 {
             reg = <2>;
             issi,pwm-register = <0x02>;
         };
 
-        blue2@3 {
+        blue2: blue2@3 {
             reg = <3>;
             issi,pwm-register = <0x03>;
         };
 
-        green2@4 {
+        green2: green2@4 {
             reg = <4>;
             issi,pwm-register = <0x04>;
         };
 
-        red2@5 {
+        red2: red2@5 {
             reg = <5>;
             issi,pwm-register = <0x05>;
         };
 
 
-        blue3@6 {
+        blue3: blue3@6 {
             reg = <6>;
             issi,pwm-register = <0x06>;
         };
 
-        green3@7 {
+        green3: green3@7 {
             reg = <7>;
             issi,pwm-register = <0x07>;
         };
 
-        red3@8 {
+        red3: red3@8 {
             reg = <8>;
             issi,pwm-register = <0x08>;
         };
@@ -247,48 +247,48 @@ zephyr_udc0: &usbd {};
         #address-cells = <1>;
         #size-cells = <0>;
 
-        blue4@0 {
+        blue4: blue4@0 {
             reg = <0>;
             issi,pwm-register = <0x00>;
         };
 
-        red4@1 {
+        red4: red4@1 {
             reg = <1>;
             issi,pwm-register = <0x01>;
         };
 
-        green4@2 {
+        green4: green4@2 {
             reg = <2>;
             issi,pwm-register = <0x02>;
         };
 
-        blue5@3 {
+        blue5: blue5@3 {
             reg = <3>;
             issi,pwm-register = <0x03>;
         };
 
-        green5@4 {
+        green5: green5@4 {
             reg = <4>;
             issi,pwm-register = <0x04>;
         };
 
-        red5@5 {
+        red5: red5@5 {
             reg = <5>;
             issi,pwm-register = <0x05>;
         };
 
 
-        blue6@6 {
+        blue6: blue6@6 {
             reg = <6>;
             issi,pwm-register = <0x06>;
         };
 
-        green6@7 {
+        green6: green6@7 {
             reg = <7>;
             issi,pwm-register = <0x07>;
         };
 
-        red6@8 {
+        red6: red6@8 {
             reg = <8>;
             issi,pwm-register = <0x08>;
         };
