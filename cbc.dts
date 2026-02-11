@@ -6,7 +6,6 @@
 
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <layouts/common/ortho_4x12/all1u.dtsi>
-#include <dt-bindings/led/is31fl3733.h>
 
 / {
     model = "A HID device for interracting with the chordboard application via USB and BLE";
@@ -173,7 +172,7 @@ zephyr_udc0: &usbd {};
     scl-pin = <&gpio0 5>;
     sda-pin = <&gpio0 7>;
 
-    is31fl3733_drv1: is31fl3733_drv1@50 {
+    is31fl3733_1: is31fl3733@50 {
         compatible = "issi,is31fl3733";
         status = "okay";
         reg = <0x50>;
@@ -237,7 +236,7 @@ zephyr_udc0: &usbd {};
     scl-pin = <&gpio0 4>;
     sda-pin = <&gpio0 31>;
 
-    is31fl3733_drv2: is31fl373_drv2@50 {
+    is31fl3733_2: is31fl373@50 {
         compatible = "issi,is31fl3733";
         status = "okay";
         reg = <0x50>;
