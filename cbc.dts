@@ -310,7 +310,7 @@ zephyr_udc0: &usbd {};
     };
 };
 
-backlight: backlight {
+&backlight {
     compatible = "zmk,backlight-led-array";
     label = "BACKLIGHT";
     leds = <&blue1 &red1 &green1   &blue2 &green2 &red2   &blue3 &green3 &red3
