@@ -119,11 +119,11 @@
     };
 
     backlight: backlight {
-        compatible = "zmk,backlight-issi";
+        compatible = "zmk,backlight";
         label = "BACKLIGHT";
-        // leds = <&blue1 &red1 &green1   &blue2 &green2 &red2   &blue3 &green3 &red3
-        //         &blue4 &red4 &green4   &blue5 &green5 &red5   &blue6 &green6 &red6
-        //         >;   
+        leds = <&blue1 &red1 &green1   &blue2 &green2 &red2   &blue3 &green3 &red3
+                &blue4 &red4 &green4   &blue5 &green5 &red5   &blue6 &green6 &red6
+                >;   
         brightness = <70>;
     };
 };
