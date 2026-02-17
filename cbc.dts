@@ -203,7 +203,7 @@ zephyr_udc0: &usbd {};
         sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
         // issi,shutdown-current = <0>;
         current-limit = <1>;
-        sync-mode = "slave";
+        sync-mode = "none";
         #address-cells = <1>;
         #size-cells = <0>;
 
@@ -267,7 +267,7 @@ zephyr_udc0: &usbd {};
         sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
         // issi,shutdown-current = <0>;
         current-limit = <1>;
-        sync-mode = "slave";
+        sync-mode = "none";
         #address-cells = <1>;
         #size-cells = <0>;
 
