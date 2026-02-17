@@ -13,7 +13,7 @@
 
     chosen {
         zephyr,sram = &sram0;
-        zephyr,flash = &flash;
+        zephyr,flash = &flash0;
         zephyr,udc = &usbd;
         zephyr,code-partition = &slot0_partition;
         zmk,kscan = &kscan0;
@@ -164,7 +164,6 @@ zephyr_udc0: &usbd {};
 &layout_ortho_4x12_all1u {
     transform = <&layout_grid_transform>;
 };
-
 
 &flash0 {
 	partitions {
