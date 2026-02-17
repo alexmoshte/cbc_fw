@@ -13,11 +13,10 @@
 
     chosen {
         zephyr,sram = &sram0;
-        zephyr,flash = &flash0;
+        zephyr,flash = &flash;
         zephyr,udc = &usbd;
         zephyr,code-partition = &slot0_partition;
         zmk,kscan = &kscan0;
-        zmk,backlight = &backlight;
         zmk,physical-layout = &layout_ortho_4x12_all1u;
         zmk,battery = &vbatt;
     };
@@ -117,15 +116,6 @@
         sensors = <&sw1_encoder &sw2_encoder &sw3_encoder &sw4_encoder &sw5_encoder>;
         triggers-per-rotation = <2>;
     };
-
-    backlight: backlight {
-        compatible = "zmk,backlight";
-        label = "BACKLIGHT";
-        leds = <&blue1 &red1 &green1   &blue2 &green2 &red2   &blue3 &green3 &red3
-                &blue4 &red4 &green4   &blue5 &green5 &red5   &blue6 &green6 &red6
-                >;   
-        brightness = <70>;
-    };
 };
 
 &adc {
@@ -175,149 +165,6 @@ zephyr_udc0: &usbd {};
     transform = <&layout_grid_transform>;
 };
 
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SCL, 0, 5)>,
-                    <NRF_PSEL(TWIM_SDA, 0, 7)>;
-        };
-    };
-
-    i2c1_default: i2c1_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SCL, 0, 4)>,
-                    <NRF_PSEL(TWIM_SDA, 0, 31)>;
-        };
-    };
-};
-
-&i2c0 {
-    status = "okay";
-    pinctrl-0 = <&i2c0_default>;
-    pinctrl-names = "default";
-
-    is31fl3733_1: is31fl3733@50 {
-        compatible = "issi,is31fl3733";
-        status = "okay";
-        reg = <0x50>;
-        sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
-        // issi,shutdown-current = <0>;
-        current-limit = <1>;
-        sync-mode = "none";
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        blue1: blue1@0 {
-            reg = <0>;
-            issi,pwm-register = <0x00>;
-        };
-
-        red1: red1@1 {
-            reg = <1>;
-            issi,pwm-register = <0x01>;
-        };
-
-        green1: green1@2 {
-            reg = <2>;
-            issi,pwm-register = <0x02>;
-        };
-
-        blue2: blue2@3 {
-            reg = <3>;
-            issi,pwm-register = <0x03>;
-        };
-
-        green2: green2@4 {
-            reg = <4>;
-            issi,pwm-register = <0x04>;
-        };
-
-        red2: red2@5 {
-            reg = <5>;
-            issi,pwm-register = <0x05>;
-        };
-
-
-        blue3: blue3@6 {
-            reg = <6>;
-            issi,pwm-register = <0x06>;
-        };
-
-        green3: green3@7 {
-            reg = <7>;
-            issi,pwm-register = <0x07>;
-        };
-
-        red3: red3@8 {
-            reg = <8>;
-            issi,pwm-register = <0x08>;
-        };
-    };
-};
-
-&i2c1 {
-    status = "okay";
-    pinctrl-0 = <&i2c1_default>;
-    pinctrl-names = "default";
-
-    is31fl3733_2: is31fl3733@50 {
-        compatible = "issi,is31fl3733";
-        status = "okay";
-        reg = <0x50>;
-        sdb-gpios = <&gpio0 19 GPIO_ACTIVE_LOW>;
-        // issi,shutdown-current = <0>;
-        current-limit = <1>;
-        sync-mode = "none";
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        blue4: blue4@0 {
-            reg = <0>;
-            issi,pwm-register = <0x00>;
-        };
-
-        red4: red4@1 {
-            reg = <1>;
-            issi,pwm-register = <0x01>;
-        };
-
-        green4: green4@2 {
-            reg = <2>;
-            issi,pwm-register = <0x02>;
-        };
-
-        blue5: blue5@3 {
-            reg = <3>;
-            issi,pwm-register = <0x03>;
-        };
-
-        green5: green5@4 {
-            reg = <4>;
-            issi,pwm-register = <0x04>;
-        };
-
-        red5: red5@5 {
-            reg = <5>;
-            issi,pwm-register = <0x05>;
-        };
-
-
-        blue6: blue6@6 {
-            reg = <6>;
-            issi,pwm-register = <0x06>;
-        };
-
-        green6: green6@7 {
-            reg = <7>;
-            issi,pwm-register = <0x07>;
-        };
-
-        red6: red6@8 {
-            reg = <8>;
-            issi,pwm-register = <0x08>;
-        };
-    };
-};
 
 &flash0 {
 	partitions {
